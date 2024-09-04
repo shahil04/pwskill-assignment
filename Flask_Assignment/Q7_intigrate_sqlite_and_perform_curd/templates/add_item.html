@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Item</title>
+</head>
+<body>
+    <h1>Add Item</h1>
+    <form method="POST" action="{{ url_for('add_item') }}">
+        <label for="name">Item Name:</label>
+        <input type="text" id="name" name="name" required>
+        <input type="submit" value="Add Item">
+    </form>
+</body>
+</html>

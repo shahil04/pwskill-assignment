@@ -1,0 +1,40 @@
+The error message indicates that you have local changes in the file `Assignment_Python_For_loop/assignmen_Python_For_loop_solution.ipynb` that haven't been committed or stashed. Git is preventing the pull operation to avoid overwriting your local changes.
+
+To resolve this, you have a few options:
+
+### Option 1: Commit your changes
+
+If you want to keep the changes you've made to the file, commit them before pulling:
+
+```bash
+git add Assignment_Python_For_loop/assignmen_Python_For_loop_solution.ipynb
+git commit -m "Committing my changes before pull"
+git pull origin main
+```
+
+This sequence of commands stages and commits your local changes and then pulls the latest changes from the remote repository.
+
+### Option 2: Stash your changes
+
+If you don't want to commit the changes but want to save them for later, you can stash them:
+
+```bash
+git stash
+git pull origin main
+git stash apply
+```
+
+The `git stash` command saves your local changes in a temporary area, allowing you to pull the changes from the remote repository. The `git stash apply` command then reapplies your stashed changes.
+
+### Option 3: Discard your changes
+
+If you don't care about your local changes and want to get the latest version from the remote repository:
+
+```bash
+git checkout -- Assignment_Python_For_loop/assignmen_Python_For_loop_solution.ipynb
+git pull origin main
+```
+
+This will discard your local changes in the specified file and pull the latest changes from the remote repository.
+
+Choose the option that best fits your workflow and whether you want to keep, stash, or discard your local changes.
